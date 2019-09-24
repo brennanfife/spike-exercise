@@ -2,9 +2,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 html {
   min-height: 100%
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -21,13 +23,16 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+
 form {
   padding: 20px;
   margin-top: 60px;
 }
+
 form button, form h5 {
   margin: 20px 0;
 }
+
 /* Fixes the text areas, profile badge, and submission buttons */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
@@ -36,6 +41,7 @@ textarea.materialize-textarea:focus:not([readonly]){
   border-color: #c5050c;
   box-shadow: none;
 }
+
 input[type=text]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label,
 input[type=email]:not(.browser-default):focus:not([readonly]) + label,

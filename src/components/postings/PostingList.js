@@ -1,11 +1,9 @@
-// posting-list and posting-list are custom css
-
 import React from 'react'
 import PostingSummary from './PostingSummary'
 
 const PostingList = () => {
     return (
-        <div className="section posting-list">
+        <div className="section">
             <PostingSummary />
             <PostingSummary />
             <PostingSummary />

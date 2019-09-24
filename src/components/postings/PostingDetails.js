@@ -1,11 +1,9 @@
-// posting-details is custom css
-
 import React from 'react'
 
 const PostingDetails = (props) => {
     const id = props.match.params.id; //console.log(props) to see the value react-router supplies this component
     return (
-        <div className="container section posting-details">
+        <div className="container section">
             <div className="card z-depth-0">
                 <div className="card-content">
                     <span className="card-title">Posting Title - {id}</span>
