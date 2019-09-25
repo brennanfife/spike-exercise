@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { signIn } from '../../store/actions/authActions'
 
 class SignIn extends Component {
     state = {
@@ -14,10 +16,12 @@ class SignIn extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        //console.log(this.state)
+        this.props.signIn(this.state)
     }
 
     render() {
+        const { authError } = this.props
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
@@ -33,10 +37,29 @@ class SignIn extends Component {
                     <div className="input-field">
                         <button className="btn red lighten-1 z-depth-0">Sign In</button>
                     </div>
+                    <div className="red-text center">
+                        { authError ? <p>{authError}</p> : null }
+                    </div>
                 </form>
             </div>
         )
     }
 }
 
-export default SignIn
+//'state.auth' from rootReducer and 'authError' from authReducer
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError
+    }
+}
+
+// allows us to make a dispatch from this component and make a 
+// call the action creator, signIn in authActions
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (creds) => dispatch(signIn(creds))
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)

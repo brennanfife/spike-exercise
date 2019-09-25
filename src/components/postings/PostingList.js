@@ -1,12 +1,15 @@
 import React from 'react'
 import PostingSummary from './PostingSummary'
+import { Link } from 'react-router-dom'
 
 const PostingList = ({postings}) => {
     return (
         <div className="section">
             { postings && postings.map(posting => {
                 return (
-                    <PostingSummary posting={posting} key={posting.id} />
+                    <Link to={'/posting/' + posting.id} key={posting.id}>
+                        <PostingSummary posting={posting} />
+                    </Link>
                 )
             })}
         </div>
