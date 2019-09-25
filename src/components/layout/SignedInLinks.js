@@ -13,7 +13,7 @@ const SignedInLinks = (props) => {
             <li><NavLink to='/create'>New Posting</NavLink></li>
             <li><a onClick={props.signOut}>Sign Out</a></li>
             <li><NavLink to='/' className='btn btn-floating red lighten-1'>
-                {props.profile.initals}    
+                {props.profile.initials}    
             </NavLink></li>
         </ul>
     )
