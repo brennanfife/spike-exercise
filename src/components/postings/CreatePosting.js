@@ -19,6 +19,7 @@ class CreateProject extends Component {
         e.preventDefault();
         //console.log(this.state)
         this.props.createPosting(this.state)
+        this.props.history.push('/')
     }
 
     render() {
