@@ -11,7 +11,7 @@ import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig'
 
-// reduxFirestore amnd reactReduxFirebase are store enhancers. We need to pass in our firebase config
+// reduxFirestore and reactReduxFirebase are store enhancers. We need to pass in our firebase config
 // This way, getFirebase and getFirestore in postingActions will know what to look for
 const store = createStore(rootReducer,
     compose(
