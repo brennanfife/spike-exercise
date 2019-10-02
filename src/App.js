@@ -6,6 +6,7 @@ import PostingDetails from './components/postings/PostingDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateProject from './components/postings/CreatePosting'
+import NotFound from './components/NotFound';
 
 class App extends Component {
   render() {
@@ -14,10 +15,12 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Dashboard} />
+          <Route path='/signin' component={SignIn} />
+          <Route path='/signup' component={SignUp} />
+          <Route path='/create' component={CreateProject} />
+          <Route path='/profile' component={Profile} />
           <Route path='/posting/:id' component={PostingDetails} />
-          <Route path='/signin' component={SignIn}/>
-          <Route path='/signup' component={SignUp}/>
-          <Route path='/create' component={CreateProject}/>
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
     );
