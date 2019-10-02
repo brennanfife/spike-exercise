@@ -1,20 +1,19 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDg9kdwaUVYGipB1InqensQVY_IuytStdQ",
-    authDomain: "spike-exercise-a74ff.firebaseapp.com",
-    databaseURL: "https://spike-exercise-a74ff.firebaseio.com",
-    projectId: "spike-exercise-a74ff",
+    apiKey: "AIzaSyDc0sprMjQIN29eogHStOOKNQvWQpQaJJ0",
+    authDomain: "spike-2b14d.firebaseapp.com",
+    databaseURL: "https://spike-2b14d.firebaseio.com",
+    projectId: "spike-2b14d",
     storageBucket: "",
-    messagingSenderId: "663666060239",
-    appId: "1:663666060239:web:5fa1d9438bd662af82c0ba",
-    measurementId: "G-54EJ7PXDKF"
+    messagingSenderId: "1017619517585",
+    appId: "1:1017619517585:web:b7e0b69dea52a684802f30",
+    measurementId: "G-L9LJLTEFEG"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.firestore()
 
-export default firebase;
+export default firebase
